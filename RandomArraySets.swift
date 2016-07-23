@@ -15,7 +15,7 @@ class RandomArraySets
     var playerOneArray = [Int]()
     var playertwoArray = [Int]()
     var count = 0
-    
+    var delet = 0
     
     func assisgnCards ()
     {
