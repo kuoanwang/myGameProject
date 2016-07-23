@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="myGameProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="021-13-Ail" userLabel="backgound Image">
+                                <rect key="frame" x="-55" y="48" width="600" height="600"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NxT-sa-m8y" userLabel="playbutton ContainerView">
+                                <rect key="frame" x="20" y="364" width="560" height="236"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7r-mt-JSh">
+                                        <rect key="frame" x="233" y="103" width="94" height="30"/>
+                                        <state key="normal" title="PLAY ROUND">
+                                            <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playRoundTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7YY-9I-rU5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="l7r-mt-JSh" firstAttribute="centerY" secondItem="NxT-sa-m8y" secondAttribute="centerY" id="WmC-Iw-XxW"/>
+                                    <constraint firstItem="l7r-mt-JSh" firstAttribute="centerX" secondItem="NxT-sa-m8y" secondAttribute="centerX" id="cs6-57-vpx"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJ5-jk-dFr" userLabel="containerView">
+                                <rect key="frame" x="160" y="236" width="280" height="128"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="taX-wF-BH7" userLabel="firsCardImages">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="128"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="LWV-MS-HXP" userLabel="height = 170"/>
+                                            <constraint firstAttribute="width" constant="120" id="pHH-oB-E7X"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="VWP-Te-Bqk" userLabel="secondCardImages">
+                                        <rect key="frame" x="160" y="0.0" width="120" height="128"/>
+                                        <color key="backgroundColor" red="0.27464420630000003" green="0.050648574439999997" blue="0.44602272729999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="VWP-Te-Bqk" secondAttribute="trailing" id="1H2-Dp-gEd"/>
+                                    <constraint firstItem="VWP-Te-Bqk" firstAttribute="height" secondItem="taX-wF-BH7" secondAttribute="height" id="8Mj-8D-lgs"/>
+                                    <constraint firstAttribute="width" constant="280" id="NZR-rN-IZE" userLabel="containerView width = 280"/>
+                                    <constraint firstItem="VWP-Te-Bqk" firstAttribute="width" secondItem="taX-wF-BH7" secondAttribute="width" id="NcV-SN-hEA"/>
+                                    <constraint firstAttribute="height" constant="128" id="QlF-pm-7dN" userLabel="containerView height = 170"/>
+                                    <constraint firstItem="taX-wF-BH7" firstAttribute="leading" secondItem="tJ5-jk-dFr" secondAttribute="leading" id="bFe-gy-lwc"/>
+                                    <constraint firstItem="VWP-Te-Bqk" firstAttribute="top" secondItem="tJ5-jk-dFr" secondAttribute="top" id="dIl-Qr-Jpv"/>
+                                    <constraint firstAttribute="bottom" secondItem="taX-wF-BH7" secondAttribute="bottom" id="jQp-nE-EbX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="NxT-sa-m8y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Yg-vx-VjS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NxT-sa-m8y" secondAttribute="trailing" id="68j-PF-pjR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="021-13-Ail" secondAttribute="bottom" id="C27-rL-tW9"/>
+                            <constraint firstItem="NxT-sa-m8y" firstAttribute="top" secondItem="tJ5-jk-dFr" secondAttribute="bottom" id="CZQ-kw-cjX"/>
+                            <constraint firstItem="021-13-Ail" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="D0J-Pa-Nz7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="021-13-Ail" secondAttribute="bottom" id="FHL-fb-1GN"/>
+                            <constraint firstItem="021-13-Ail" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HkQ-Pe-LCg"/>
+                            <constraint firstItem="tJ5-jk-dFr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Qni-0o-mA1"/>
+                            <constraint firstItem="NxT-sa-m8y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aPH-mj-Xsg"/>
+                            <constraint firstItem="021-13-Ail" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="k2Z-66-lzd"/>
+                            <constraint firstItem="tJ5-jk-dFr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="of6-TW-97b"/>
+                            <constraint firstItem="021-13-Ail" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="p87-6v-ea1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NxT-sa-m8y" secondAttribute="bottom" id="w4t-6H-0iM"/>
+                            <constraint firstAttribute="trailing" secondItem="021-13-Ail" secondAttribute="trailing" id="xUd-1R-kG2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="021-13-Ail" id="X8i-4f-Ckf"/>
+                        <outlet property="firstCardImage" destination="taX-wF-BH7" id="Ohz-bQ-8ir"/>
+                        <outlet property="playRoundButton" destination="l7r-mt-JSh" id="cx0-Y6-bcA"/>
+                        <outlet property="secondImage" destination="VWP-Te-Bqk" id="3hE-c5-9rx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="106"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="120" height="170"/>
+        <image name="background" width="667" height="622"/>
+    </resources>
+</document>
